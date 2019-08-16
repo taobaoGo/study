@@ -1,3 +1,4 @@
+# 安装&环境
 ### wsl ssh
 ```shell
 cp -rf /mnt/c/Users/admin/.ssh /root
@@ -19,9 +20,17 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 # 保存完成后执行
 source /etc/profile
 ```
-
+# IDE
 ## Goland中的数据库工具
 Goland-->View-->Tools Window-->Database
 
 ### package
 https://www.jianshu.com/p/a537ee63d606
+
+# 工作区work space
+## mod
+
+## src：源码存放目录，存放*.go文件。
+- 代码包:就是src目录下的文件夹，一个文件夹下的源代码必须只有一个包名。
+## pkg：归档文件目录，存放*.a文件。
+## bin：存放可执行文件。
