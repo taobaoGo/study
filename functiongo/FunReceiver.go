@@ -1,5 +1,6 @@
 /**
 类型、接收器Receiver、方法
+接收器必须在包内用type定义，对包外的任何类型都不能做接收器，也不能有类型方法。
  */
 
 // https://blog.csdn.net/kang___xi/article/details/86550705
@@ -13,7 +14,11 @@ package function
 import (
 	"fmt"
 )
-import "../models"
+import "study/models"
+
+func init()  {
+	fmt.Println("FunReceiver:1")
+}
 
 // 接收器(类型别名)必须在包内命名，并且只能在包内起作用
 // bag可以做函数接收器，models.Bag无法做接收器

@@ -1,13 +1,14 @@
 package main
 
 import (
-	"./function"
 	"./typego"
-	"./datatypego"
+	function "./functiongo"
 )
 func main()  {
-	datatypego.FunctionTypeMain()
+
+	//datatypego.FunctionTypeMain()
 	function.FuncVar()
-	function.FuncVar()
-	typego.Struct_fun()
+	//function.FuncVar()
+	//typego.Struct_fun()
+	typego.InterfaceMain()
 }

@@ -1,6 +1,8 @@
+sudo vim /etc/profile
+## 在文件末尾追加
 export GOROOT=/usr/local/go
-echo GOROOT
 export GOPATH=/mnt/d/gopath
-echo GOPATH
+export GOBIN=$GOPATH/bin
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
-echo $PATH
+# 保存完成后执行
+source /etc/profile
