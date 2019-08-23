@@ -20,23 +20,30 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 # 保存完成后执行
 source /etc/profile
 ```
+## 工作区work space
+### src：源码存放目录
+> 存放*.go文件。
+- 代码包:src/projname/下的文件夹，源码文件的包名与文件夹同名。
+### pkg：归档文件目录
+>
+存放*.a文件。归档文件名就是源码文件的文件夹名。
+### bin：存放可执行文件
+>
+文件名是项目名，即命令源码文件所在的文件夹名。
+
+## 包管理
+https://www.jianshu.com/p/a537ee63d606
+### go modules
+https://github.com/golang/go/wiki/Modules
+```shell
+go mod init ProjectName
+go build -o ProjectName
+```
+
 # IDE
 ## Goland中的数据库工具
 Goland-->View-->Tools Window-->Database
 
-### package
-https://www.jianshu.com/p/a537ee63d606
 
-# 工作区work space
-## mod
-
-## src：源码存放目录
-> 存放*.go文件。
-- 代码包:src/projname/下的文件夹，源码文件的包名与文件夹同名。
-## pkg：归档文件目录
->
-存放*.a文件。归档文件名就是源码文件的文件夹名。
-## bin：存放可执行文件
->
-文件名是项目名，即命令源码文件所在的文件夹名。
  
+
