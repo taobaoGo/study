@@ -40,8 +40,8 @@ go mod init ProjectName
 go build -o ProjectName
 ```
 
-# IDE
-## Goland中的数据库工具
+# IDE:Goland
+## 数据库工具
 Goland-->View-->Tools Window-->Database
 
 
