@@ -86,16 +86,20 @@ i, j = j, i // swap values of i and j
 	println(x) // 0 ，变量没有被初始化"zero"
 	x = 123    // 改变x标识的存储区的值
 	fmt.Printf("&x value %v type %T \n", &x,&x)
+    // &x value 0xc00000a0a8 type *int 
 
 	var y int
 	y = 456
 	x = y // x标识区的值更新为y存储区的值
 	fmt.Printf("after x=y,&x value %v type %T \n", &x,&x) // &x没有改变
+    // after x=y,&x value 0xc00000a0a8 type *int 
 
 	// 表达式&x获取一个指向x的
 	var p=&x
 	fmt.Printf("p value %v type %T \n", p,p)
+    // p value 0xc00000a0a8 type *int 
 	fmt.Printf("*p value %v type %T \n", *p,*p)
+    // *p value 456 type int 
 ```
 ```go
 0
