@@ -2,7 +2,7 @@ package function
 
 import "fmt"
 
-func init()  {
+func init() {
 	fmt.Println("FuncVariable:1")
 }
 
@@ -13,13 +13,14 @@ var delegate func(int)
 */
 type class struct {
 }
+
 func (c *class) Do(v int) {
 	fmt.Println("call method do:", v)
 }
 func funcDo(v int) {
 	fmt.Println("call function do:", v)
 }
-func FuncVar()  {
+func FuncVar() {
 	var delegate func(int)
 	c := new(class)
 	// 保存结构体方法
@@ -29,4 +30,3 @@ func FuncVar()  {
 	delegate = funcDo
 	delegate(100)
 }
-

@@ -1,14 +1,14 @@
 package main
 
-import (
-	"./typego"
-	function "./functiongo"
-)
-func main()  {
+import "study/program_structure"
 
-	//datatypego.FunctionTypeMain()
-	function.FuncVar()
+func main() {
+	program_structure.Pointers()
+
+	//basic_data_types.FunctionTypeMain()
+	//function.FuncVar()
 	//function.FuncVar()
 	//typego.Struct_fun()
-	typego.InterfaceMain()
+	//typego.InterfaceMain()
+
 }
