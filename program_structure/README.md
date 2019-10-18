@@ -80,7 +80,27 @@ i, j = j, i // swap values of i and j
 
 >If a variable is declared “var x int”, the expression &x (‘‘address of x’’) yields a pointer to an integer variable, that is, a value of type *int, which is pronounced ‘‘pointer to int.’’ If this value is called “p”, we say ‘‘p points to x,’’ or equivalently ‘‘p contains the address of x.’’ The variable to which p points is written *p. The expression *p yields the value of that variable, an int, but since \*p denotes a variable, it may also app ear on the left-hand side of an assignment, in which case the assignment updates the variable.
 >>如果一个变量声明为“var x int”,表达式&x(x的地址)产生一个指向整数变量的指针，指针的数据类型是\*int，读作“指向int”，如果&x的值叫做“p”，我们读作“p指向x”或者说“p包含x的地址(p contains the address of x)”，指针变量写作\*p(The variable to which p points is written \*p),表达式\*p是变量的值即数据存储块（The expression \*p yields the value of that variable）,这样\*p表示一个变量,它也可以出现在赋值的左侧，在这种情况下赋值会更新变量。
-
-
 ```
+// 变量是包含值的存储区，用变量名称标识这个存储区,通过变量名可以访问被标识的存储区。
+	var x int
+	println(x) // 0 ，变量没有被初始化"zero"
+	x = 123    // 改变x标识的存储区的值
+	fmt.Printf("&x value %v type %T \n", &x,&x)
+
+	var y int
+	y = 456
+	x = y // x标识区的值更新为y存储区的值
+	fmt.Printf("after x=y,&x value %v type %T \n", &x,&x) // &x没有改变
+
+	// 表达式&x获取一个指向x的
+	var p=&x
+	fmt.Printf("p value %v type %T \n", p,p)
+	fmt.Printf("*p value %v type %T \n", *p,*p)
+```
+```go
+0
+&x value 0xc00000a0a8 type *int 
+after x=y,&x value 0xc00000a0a8 type *int 
+p value 0xc00000a0a8 type *int 
+*p value 456 type int 
 ```

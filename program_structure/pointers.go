@@ -10,12 +10,14 @@ func Pointers() {
 	x = 123    // 改变x标识的存储区的值
 	fmt.Printf("&x value %v type %T \n", &x,&x)
 
-
 	var y int
 	y = 456
 	x = y // x标识区的值更新为y存储区的值
 	fmt.Printf("after x=y,&x value %v type %T \n", &x,&x) // &x没有改变
 
 	// 表达式&x获取一个指向x的
+	var p=&x
+	fmt.Printf("p value %v type %T \n", p,p)
+	fmt.Printf("*p value %v type %T \n", *p,*p)
 
 }
